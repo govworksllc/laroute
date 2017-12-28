@@ -29,10 +29,11 @@
 
             toRoute : function (route, parameters) {
                 var uri = this.replaceNamedParameters(route.uri, parameters);
-                var qs  = this.getRouteQueryString(parameters);
+                var host = this.replaceNamedParameters(route.host, parameters);
+                var qs = this.getRouteQueryString(parameters);
 
                 if (this.absolute && this.isOtherHost(route)){
-                    return "//" + route.host + "/" + uri + qs;
+                    return "//" + route.host + uri + qs;
                 }
 
                 return this.getCorrectUrl(uri + qs);
@@ -43,6 +44,8 @@
             },
 
             replaceNamedParameters : function (uri, parameters) {
+                if (!uri) return uri;
+
                 uri = uri.replace(/\{(.*?)\??\}/g, function(match, key) {
                     if (parameters.hasOwnProperty(key)) {
                         var value = parameters[key];
@@ -192,4 +195,3 @@
     }
 
 }).call(this);
-
