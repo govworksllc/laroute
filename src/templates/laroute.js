@@ -8,6 +8,9 @@
             rootUrl: '$ROOTURL$',
             routes : $ROUTES$,
             prefix: '$PREFIX$',
+            travelvisaDomain: '$TRAVELVISADOMAIN$',
+            passportCenterDomain: '$PASSPORTCENTERDOMAIN$',
+            passportRenewalDomain: '$PASSPORTRENEWALDOMAIN$',
 
             route : function (name, parameters, route) {
                 route = route || this.getByName(name);
