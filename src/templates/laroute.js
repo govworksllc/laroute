@@ -36,7 +36,7 @@
                 var qs = this.getRouteQueryString(parameters);
 
                 if (this.absolute && this.isOtherHost(route)){
-                    return "//" + host + uri + qs;
+                    return "//" + host + '/' + uri + qs;
                 }
 
                 return this.getCorrectUrl(uri + qs);
