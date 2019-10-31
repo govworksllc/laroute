@@ -106,11 +106,11 @@ class LarouteGeneratorCommand extends Command
         $rootUrl    = $this->config->get('app.url', '');
         $prefix		= $this->config->get('laroute.prefix', '');
         $travelvisaDomain = $this->config->get('laroute.travelvisa_domain', '');
-        $passportCenterDomain = $this->config->get('laroute.passportcenter_domain', '');
+        $onlineExpeditorsDomain = $this->config->get('laroute.onlineexpeditors_domain', '');
         $passportRenewalDomain = $this->config->get('laroute.passportrenewal_domain', '');
 
         return compact('namespace', 'routes', 'absolute', 'rootUrl', 'prefix',
-        'travelvisaDomain', 'passportCenterDomain', 'passportRenewalDomain');
+        'travelvisaDomain', 'onlineExpeditorsDomain', 'passportRenewalDomain');
     }
 
 

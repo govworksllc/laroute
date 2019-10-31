@@ -9,7 +9,7 @@
             routes : $ROUTES$,
             prefix: '$PREFIX$',
             travelvisaDomain: '$TRAVELVISADOMAIN$',
-            passportCenterDomain: '$PASSPORTCENTERDOMAIN$',
+            onlineExpeditorsDomain: '$ONLINEEXPEDITORSDOMAIN$',
             passportRenewalDomain: '$PASSPORTRENEWALDOMAIN$',
 
             route : function (name, parameters, route) {
